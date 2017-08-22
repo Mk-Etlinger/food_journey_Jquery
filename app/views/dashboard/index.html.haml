@@ -1,7 +1,8 @@
 %h1.title Welcome #{current_user.email}!
-%p
-    = link_to 'Add a meal', nested_new_meal_path(current_user)
-    = link_to 'Add new symptom', new_symptom_path
+#mealForm
+    = link_to 'Add a meal', new_meal_path, class: 'newMeal'
+#symptomForm    
+    = link_to 'Add new symptom', new_symptom_path, class: 'newSymptom'
 %h2 Recent Meals:
 = render partial: 'meal_display', locals: { meals: @meals} 
 %h2 Recent Symptoms:
