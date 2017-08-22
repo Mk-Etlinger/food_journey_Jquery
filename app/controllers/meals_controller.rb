@@ -10,12 +10,13 @@ class MealsController < ApplicationController
   def new
     # Needs to respond and render to JSON to retrieve new meals form
     @meal = Meal.new
+    render 'meals/new', layout: false
   end
 
   def create
     # Needs to respond and render to JSON to create a meal
+    binding.pry
     @meal = current_user.meals.build(meal_params)
-
     if @meal.save
       redirect_to dashboard_path
     else
