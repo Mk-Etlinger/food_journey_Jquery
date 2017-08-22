@@ -13,6 +13,7 @@
 //= require jquery
 //= require new
 //= require create
+//= require show
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
