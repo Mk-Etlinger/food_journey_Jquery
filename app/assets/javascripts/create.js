@@ -7,7 +7,8 @@ $(document).ready(function() {
             url: action,
             data: $(this).serialize(),
             success: function(response) {
-                debugger;
+                $('form').hide()
+                $('#mealForm').append('<p>You successfully created a new meal!</p>')
             }     
         })
     });
