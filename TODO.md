@@ -2,7 +2,7 @@ New Features:
 - [ ] Mark ingredients as safe (e.g. I know cucumbers are fine. Ing. need to belong to users. Still keep data, but handle in view? e.g. Show safe foods checkbox)
 - [ ] Visualize data with histogram of most symptomatic ingredients
 - [ ] Add tags for certain food groups/compounds(FODMAP, Oxalate, Goitrogens, histamine, salicylates, purines)
-- [ ] 
+- [ ] Calculate hours ago on Symptom form submit(grab user timezone with hidden form)
 - [ ] 
 - [ ] 
 - [ ] 
