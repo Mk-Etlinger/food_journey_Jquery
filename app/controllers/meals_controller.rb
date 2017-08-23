@@ -3,12 +3,10 @@ class MealsController < ApplicationController
   before_action :set_meal, only: [:edit, :update, :destroy]
 
   def index
-    # Needs to respond and render to JSON to retrieve recent meals
     @meals = current_user.meals.order(created_at: :desc)
   end
 
   def new
-    # Needs to respond and render to JSON to retrieve new meals form
     @meal = Meal.new
     render 'meals/new', layout: false
   end
@@ -17,7 +15,9 @@ class MealsController < ApplicationController
     # Needs to respond and render to JSON to create a meal
     @meal = current_user.meals.build(meal_params)
     if @meal.save
-      
+      # does it make sense to render message here or in JS?
+      # should this render the newly created meal and update the index?
+      render json: @meal
     else
       render :new
     end
