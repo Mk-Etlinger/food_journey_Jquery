@@ -2,6 +2,7 @@
     #dash_box    
         %h3.meal_link
             = link_to("#{meal.meal_type + '-' + meal.description}", meal_ingredients_path(meal), class: "meal-#{meal.id}") 
+            %ul{id: "ingredientList"}
         #links
             = link_to 'Edit', edit_meal_path(meal)
             = link_to 'Delete', meal_path(meal), method: 'DELETE'
