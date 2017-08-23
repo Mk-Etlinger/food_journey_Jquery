@@ -4,7 +4,7 @@ class IngredientsController < ApplicationController
     user_signed_in?
     authenticate_user!
     @meal = Meal.find_by(id: params[:meal_id])
-    render 'ingredients/index', layout: false
+    render json: @meal
   end
 
   # def safe
