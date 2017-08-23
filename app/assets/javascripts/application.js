@@ -11,8 +11,8 @@
 // about supported directives.
 //
 //= require jquery
-//= require new
-//= require create
+//= require newMeal
+//= require createMeal
 //= require ingredientIndex
 //= require symptomShow
 //= require rails-ujs
