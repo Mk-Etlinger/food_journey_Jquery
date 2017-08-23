@@ -23,6 +23,8 @@ class SymptomsController < ApplicationController
 
   def show
     @reaction = @symptom.reactions.first
+
+    render 'symptoms/show', layout: false
   end
 
   def edit
