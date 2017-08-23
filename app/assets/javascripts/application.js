@@ -13,7 +13,8 @@
 //= require jquery
 //= require new
 //= require create
-//= require show
+//= require ingredientIndex
+//= require symptomShow
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
