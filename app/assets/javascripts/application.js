@@ -16,5 +16,4 @@
 //= require ingredientIndex
 //= require symptomShow
 //= require rails-ujs
-//= require turbolinks
 //= require_tree .
