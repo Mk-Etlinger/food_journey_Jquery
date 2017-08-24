@@ -3,10 +3,8 @@ $(document).ready(function() {
         event.preventDefault()
         let reactionDiv = $(this).closest('#dash_box').find('#reactionDetails')
         $.get(this.href, function(reaction) {
-            var reactionDetails = `<p>severity: ${reaction.severity}</p>
-            <p>stress_level: ${reaction.stress_level}</p>
-            <p>notes: ${reaction.notes}</p>`
-            reactionDiv.html(`${reactionDetails}`)        
+            let displayText = new jsonResponseHandler(reaction, this)
+            reactionDiv.html(displayText.displaySymptomDetails())        
         })
     });
 });
