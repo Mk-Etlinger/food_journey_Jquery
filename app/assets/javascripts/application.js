@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require jquery
+//= require jsonResponseHandler
 //= require newMeal
 //= require createMeal
 //= require ingredientIndex
