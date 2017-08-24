@@ -1,5 +1,5 @@
-- meals.each do |meal|
-    #dash_box    
+#dash_box    
+    - meals.each do |meal|
         %h3.meal_link
             = link_to("#{meal.meal_type + '-' + meal.description}", meal_ingredients_path(meal), class: "meal-#{meal.id}") 
             %ul{id: "ingredientList"}
