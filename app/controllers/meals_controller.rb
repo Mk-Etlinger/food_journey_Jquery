@@ -12,7 +12,6 @@ class MealsController < ApplicationController
   end
 
   def create
-    # Needs to respond and render to JSON to create a meal
     @meal = current_user.meals.build(meal_params)
     if @meal.save
       # does it make sense to render message here or in JS?
