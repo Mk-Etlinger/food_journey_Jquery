@@ -20,13 +20,14 @@ class Symptom < ApplicationRecord
     set_meals_within_three_days
     @meals.each do |meal|
       meal.ingredients.each do |ingredient|
-        self.ingredients << ingredient unless ingredient.safe == true
+        self.ingredients << ingredient
       end
     end
   end
 
   def reaction_logs=(attributes)
     self.reactions.each do |reaction|
+      binding.pry
       reaction.reaction_logs.create(occurred_at: @occurred_at)
     end
   end
@@ -38,6 +39,7 @@ class Symptom < ApplicationRecord
   def set_occurred_at(attributes)
     hours = attributes['0']['occurred_at'].to_f
     @occurred_at = Time.current.ago(hours.hour)
+    binding.pry
   end
 
   def set_user_id(attributes)
