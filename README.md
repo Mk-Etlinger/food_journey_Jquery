@@ -5,9 +5,10 @@ A simple app to allow you to keep track of your diet and symptoms.
 ## Requirments
 
 * Ruby version: 2.4
+* Rails version: 5.1.2
 * Configuration: modify files in `config`
-* Database creation: `rake db:migrate`
-* Database initialization: `rake db:seed`
+* Database creation: `rails db:migrate`
+* Database initialization: `rails db:seed`
 
 ## Deployment instructions: 
 
