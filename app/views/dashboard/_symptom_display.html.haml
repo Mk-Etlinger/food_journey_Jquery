@@ -2,6 +2,7 @@
     #dash_box    
         %h3.symptom_link
             = link_to("#{symptom.description}", symptom_path(symptom))
+            #reactionDetails
         #links
             = link_to 'Edit', edit_symptom_path(symptom)
             = link_to 'Delete', symptom_path(symptom), method: 'DELETE' 
