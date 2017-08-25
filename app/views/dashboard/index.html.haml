@@ -1,4 +1,8 @@
 %h1.title Welcome #{current_user.email}!
+- clear_already_logged_in_alert
+- unless flash[:alert].blank?
+    #error_explanation
+        = flash[:alert]
 #mealForm
     = link_to 'Add a meal', new_meal_path, class: 'newMeal'
 #symptomForm    
