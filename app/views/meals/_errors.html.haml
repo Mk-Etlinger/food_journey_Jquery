@@ -4,6 +4,6 @@
             - @meal.errors.full_messages.each do |msg|
                 %li= msg
 - clear_already_logged_in_alert
-- unless flash[:alert].empty?
+- unless flash[:alert].blank?
     #error_explanation
         = flash[:alert]
