@@ -1,6 +1,8 @@
 $(document).ready(function() {
     $('.symptom_link').on('click', 'a', function(event) {
-        event.preventDefault()
+        if (this.className == "") {
+        event.preventDefault();            
+        }      
         let reactionDiv = $(this).closest('#dash_box').find('#reactionDetails')
         $.get(this.href, function(reaction) {
             let displayText = new jsonResponseHandler(reaction, this)
@@ -8,3 +10,9 @@ $(document).ready(function() {
         })
     });
 });
+
+// function stopEventOnShowHTML() {
+//     if (this.className == "") {
+//         event.preventDefault();
+//     }    
+// }
