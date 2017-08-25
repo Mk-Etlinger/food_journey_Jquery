@@ -12,7 +12,7 @@ class SymptomsController < ApplicationController
   
   def create
     # replace nested_new_meal with dashboard???
-    redirect_to nested_new_meal_path(current_user), alert: no_meals_message and return if valid_meals.empty?
+    redirect_to dashboard_path, alert: no_meals_message and return if valid_meals.empty?
     @symptom = current_user.symptoms.build(symptom_params)
 
     if @symptom.save
@@ -24,7 +24,10 @@ class SymptomsController < ApplicationController
 
   def show
     @reaction = @symptom.reactions.first
-    render json: @reaction
+    respond_to do |format|
+      format.json {render json: @reaction}
+      format.html {}
+    end
   end
 
   def edit
