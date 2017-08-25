@@ -1,12 +1,10 @@
 $(document).ready(function() {
-    $('#mealForm').on('submit', 'form', function(event) {
+    $('#mealForm').on('submit', '#new_meal', function(event) {
         event.preventDefault()
         $.post(this.action, $(this).serialize(), function(meal) {
             let data = new jsonResponseHandler(meal, this)
-            $('#mealForm').html('<p>You successfully created a new meal!</p>')
-            $('#dash_box').before('<div id="dash_box"> <h3 class="meal_link">' +
-                    data.displayMealUrl() +
-                    '<ul id="ingredientList"> </ul </h3> </div>')            
+            $('#mealForm').html('<p>You successfully created a new meal!</p><a class="newMeal" href="/meals/new">Add a meal</a>')
+            $('#dash_box').before(data.displayMeal())            
         })
     });
 });
