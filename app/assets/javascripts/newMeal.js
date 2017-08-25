@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $('.newMeal').on('click', function(event) {
+    $(document).on('click','.newMeal', function(event) {
         event.preventDefault()
         var action = $(this).attr('href')
         $.get(action, function(response) {
