@@ -3,7 +3,7 @@ New Features:
 - [ ] Visualize data with histogram of most symptomatic ingredients
 - [ ] Add tags for certain food groups/compounds(FODMAP, Oxalate, Goitrogens, histamine, salicylates, purines)
 - [ ] Calculate hours ago on Symptom form submit(grab user timezone with hidden form)
-- [ ] 
+- [ ] Index meals AND symptoms by human readable date
 - [ ] 
 - [ ] 
 - [ ] Encouraging quotes on Dashboard?
