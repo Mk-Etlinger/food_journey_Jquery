@@ -14,8 +14,6 @@ class MealsController < ApplicationController
   def create
     @meal = current_user.meals.build(meal_params)
     if @meal.save
-      # does it make sense to render message here or in JS?
-      # should this render the newly created meal and update the index?
       render json: @meal
     else
       render :new
