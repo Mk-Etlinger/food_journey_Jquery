@@ -4,25 +4,23 @@ class jsonResponseHandler {
         this.context = context;
     }
 
-    displayMeal(){
-        return `<div id="dash_box"> 
-        <h3 class="meal_link">
-        <a href=${this.context.url}/${this.response.id}/ingredients>${this.response.meal_type + '-' + this.response.description}</a>
-        <ul id="ingredientList"> </ul> 
-        </h3> 
-        </div>`
+    displayMeal() {
+        return (`
+            <div id="dash_box"> 
+                <h3 class="meal_link">
+                <a href=${this.context.url}/${this.response.id}/ingredients>${this.response.meal_type + '-' + this.response.description}</a>
+                <ul id="ingredientList"> </ul> 
+                </h3> 
+            </div>
+        `)
     }
 
-    displayIngredientIndex(){
+    displayIngredientIndex() {
         // refactor to use map and join?
-        let content = ''
-        this.response.forEach(function(ingredient) {
-            content += `<li>${ingredient.name}</li>`
-        })
-        return content;
+        return this.response.map(ingredient => `<li>${ingredient.name}</li>`);
     }
 
-    displaySymptomDetails(){
+    displaySymptomDetails() {
          return `<p>severity: ${this.response.severity}</p>
         <p>stress_level: ${this.response.stress_level}</p>
         <p>notes: ${this.response.notes}</p>
